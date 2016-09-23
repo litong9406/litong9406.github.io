@@ -4,26 +4,30 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>JavaScript 贪吃蛇游戏的实现  | 李童的博客</title>
+  <title>MakeDown 学习笔记  | 李童的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JavaScript 贪吃蛇游戏的实现###前言游戏介绍：贪吃蛇游戏是一款经典小游戏，既简单又耐玩。通过控制蛇头方向吃蛋，使得蛇变长，从而获得积分。游戏玩法：上下左右控制蛇的方向，寻找吃的东西，每吃一口就能得到一定的积分，而且蛇的身子会越吃越长，身子越长玩的难度就越大，不能碰墙，不能咬到自己的身体，更不能咬自己的尾巴，等到了一定的分数。
-###正文
-#####步骤1：创建页面布局，将每一个小格放到">
+  <meta name="description" content="欢迎使用马克飞象@(示例笔记本)[马克飞象|帮助|Markdown]
+马克飞象是一款专为印象笔记（Evernote）打造的Markdown编辑器，通过精心的设计与技术实现，配合印象笔记强大的存储和同步功能，带来前所未有的书写体验。特点概述：
+
+功能丰富 ：支持高亮代码块、LaTeX 公式、流程图，本地图片以及附件上传，甚至截图粘贴，工作学习好帮手；
+得心应手 ：简洁高效的编辑器，提供桌面客户端以及">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript 贪吃蛇游戏的实现 ">
+<meta property="og:title" content="MakeDown 学习笔记 ">
 <meta property="og:url" content="http://yoursite.com/2016/09/13/哈哈/index.html">
 <meta property="og:site_name" content="李童的博客">
-<meta property="og:description" content="JavaScript 贪吃蛇游戏的实现###前言游戏介绍：贪吃蛇游戏是一款经典小游戏，既简单又耐玩。通过控制蛇头方向吃蛋，使得蛇变长，从而获得积分。游戏玩法：上下左右控制蛇的方向，寻找吃的东西，每吃一口就能得到一定的积分，而且蛇的身子会越吃越长，身子越长玩的难度就越大，不能碰墙，不能咬到自己的身体，更不能咬自己的尾巴，等到了一定的分数。
-###正文
-#####步骤1：创建页面布局，将每一个小格放到">
-<meta property="og:image" content="http://img.blog.csdn.net/20160922090541322">
-<meta property="og:updated_time" content="2016-09-23T02:46:35.000Z">
+<meta property="og:description" content="欢迎使用马克飞象@(示例笔记本)[马克飞象|帮助|Markdown]
+马克飞象是一款专为印象笔记（Evernote）打造的Markdown编辑器，通过精心的设计与技术实现，配合印象笔记强大的存储和同步功能，带来前所未有的书写体验。特点概述：
+
+功能丰富 ：支持高亮代码块、LaTeX 公式、流程图，本地图片以及附件上传，甚至截图粘贴，工作学习好帮手；
+得心应手 ：简洁高效的编辑器，提供桌面客户端以及">
+<meta property="og:updated_time" content="2016-09-23T03:00:25.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript 贪吃蛇游戏的实现 ">
-<meta name="twitter:description" content="JavaScript 贪吃蛇游戏的实现###前言游戏介绍：贪吃蛇游戏是一款经典小游戏，既简单又耐玩。通过控制蛇头方向吃蛋，使得蛇变长，从而获得积分。游戏玩法：上下左右控制蛇的方向，寻找吃的东西，每吃一口就能得到一定的积分，而且蛇的身子会越吃越长，身子越长玩的难度就越大，不能碰墙，不能咬到自己的身体，更不能咬自己的尾巴，等到了一定的分数。
-###正文
-#####步骤1：创建页面布局，将每一个小格放到">
-<meta name="twitter:image" content="http://img.blog.csdn.net/20160922090541322">
+<meta name="twitter:title" content="MakeDown 学习笔记 ">
+<meta name="twitter:description" content="欢迎使用马克飞象@(示例笔记本)[马克飞象|帮助|Markdown]
+马克飞象是一款专为印象笔记（Evernote）打造的Markdown编辑器，通过精心的设计与技术实现，配合印象笔记强大的存储和同步功能，带来前所未有的书写体验。特点概述：
+
+功能丰富 ：支持高亮代码块、LaTeX 公式、流程图，本地图片以及附件上传，甚至截图粘贴，工作学习好帮手；
+得心应手 ：简洁高效的编辑器，提供桌面客户端以及">
   
     <link rel="alternative" href="/atom.xml" title="李童的博客" type="application/atom+xml">
   
@@ -222,7 +226,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      JavaScript 贪吃蛇游戏的实现 
+      MakeDown 学习笔记 
     </h1>
   
 
@@ -238,18 +242,88 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="JavaScript-贪吃蛇游戏的实现"><a href="#JavaScript-贪吃蛇游戏的实现" class="headerlink" title="JavaScript 贪吃蛇游戏的实现"></a>JavaScript 贪吃蛇游戏的实现</h2><p>###前言<br>游戏介绍：贪吃蛇游戏是一款经典小游戏，既简单又耐玩。通过控制蛇头方向吃蛋，使得蛇变长，从而获得积分。<br>游戏玩法：上下左右控制蛇的方向，寻找吃的东西，每吃一口就能得到一定的积分，而且蛇的身子会越吃越长，身子越长玩的难度就越大，不能碰墙，不能咬到自己的身体，更不能咬自己的尾巴，等到了一定的分数。</p>
-<p>###正文</p>
-<p>#####步骤1：创建页面布局，将每一个小格放到数组里面，通过行列构造一个二维数组，方便接下来的判断和一系列的操作。</p>
-<p>var rowNum = 30; //行<br>var colNum = 20 //列<br>function canvasBG(rowNum, colNum) {<br>for(var i = 0; i &lt; rowNum; i++) {<br>var row = document.createElement(“div”);<br>var rowArray = [];<br>for(var j = 0; j &lt; colNum; j++) {<br>var col = document.createElement(“div”);<br>col.className = ‘col’//每一小格的样式名<br>row.appendChild(col)<br>rowArray.push(col)<br>}<br>mainDiv.appendChild(row);<br>arr.push(rowArray)//arr即为创建的二维数组<br>}<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#####步骤2：创建蛇的身体，并通过计时器让蛇身体移动</div></pre></td></tr></table></figure></p>
-<p>//创建蛇身体<br>var x=2;//列值<br>var y=10//行值<br>var sneckBody=[];//用来存放蛇的身体<br>//这样蛇初使的位置为第10的前面3个小格，即蛇长度为3；<br>function sneck() {<br>for(var i = 0; i &lt; 3; i++) {<br>arr[y][i].className = ‘col activeSneck’;//在原有小格样式的基础上，添加新样式，来改变背景颜色，产生蛇的身体<br>sneckBody.push(arr[y][i]);<br>}<br>}<br>//控制蛇的移动<br>sneckTimer = setInterval(function() {<br>//根据设置的方向来设置蛇头移动的方向。<br>switch(direction) {<br>case ‘right’:<br>x++;<br>break;<br>case ‘left’:<br>x–<br>break;<br>case ‘up’:<br>y–;<br>break;<br>case ‘down’:<br>y++;<br>break;<br>default:<br>break;<br>}<br>sneckBody[0].className = ‘col’;<br>sneckBody.shift();<br>arr[y][x].className = ‘col activeSneck’;<br>sneckBody.push(arr[y][x]);//sneckBody数组专门用来存放蛇的身体<br>}, time)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#####步骤3：控制蛇的移动，并加判断防止重复按键</div></pre></td></tr></table></figure></p>
-<p>var delaytime = null;//定时器<br>var changeDir = true;<br>//通过上下左右按键来改变direction的值，来改变蛇头的移动方向。<br>document.onkeydown = function(event) {<br>//判断是否需要改变方向,ture表示需要改变，false不要<br>if(!changeDir) {<br>return; //表示直接结束函数，后续代码不执行；<br>}<br>var event = window.event || event;<br>console.log(event.keyCode)<br>//加入判断，防止蛇往移动相反方向跑，出现错误<br>switch(event.keyCode) {<br>case 37:<br>if(direction != ‘right’) {<br>direction = ‘left’;<br>}<br>break;<br>case 39:<br>if(direction != ‘left’) {<br>direction = ‘right’;<br>}<br>break;<br>case 38:<br>if(direction != ‘down’) {<br>direction = ‘up’;<br>}<br>break;<br>case 40:<br>if(direction != ‘up’) {<br>direction = ‘down’;<br>}<br>break;<br>default:<br>break;<br>}<br>changeDir = false;<br>//加延时以及changeDir解决同时按两个键出现的bug;<br>delaytime = setTimeout(function() {<br>changeDir = true;<br>}, time)<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#####步骤4：创建食物，通过随机数函数来创建生成食物的位置，并进行判断防止和蛇身重合</div></pre></td></tr></table></figure></p>
-<p>//随机函数<br>function random_(max) {<br>var rand = Math.floor(Math.random() * max);<br>return rand;<br>}</p>
-<p>function createEgg() {<br>//随机出新的egg的下标的x和y<br>eggX = random<em>(colNum);<br>eggY = random</em>(rowNum);<br>//如果即将生蛋的位置和蛇身重合，即className一样<br>if(arr[eggY][eggX].className == ‘col activeSneck’) {<br>createEgg(); //重新生成<br>} else {<br>//否则，给新生的蛋的位置，并且修改样式<br>arr[eggY][eggX].className = ‘col egg’;<br>}<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#####步骤5：进行判断：</div><div class="line">判断1：蛇跑出边界，游戏结束</div></pre></td></tr></table></figure></p>
-<p>if(y &lt; 0 || y &gt;= rowNum || x &lt; 0 || x &gt;= colNum) {<br>alert(‘game over’ + “ “ + ‘总分’ + score);<br>clearInterval(sneckTimer);<br>return;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">判断2：蛇碰到自己身体，游戏结束</div></pre></td></tr></table></figure></p>
-<p>//判断蛇吃到自己<br>for(var i = 0; i &lt; sneckBody.length; i++) {<br>if(sneckBody[i] == arr[y][x]) {<br>alert(‘game over’ + “ “ + ‘总分’ + score);<br>clearInterval(sneckTimer);<br>return;<br>}<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">判断3：蛇吃到食物，分数加1，并且继续创建食物</div></pre></td></tr></table></figure></p>
-<p>//判断蛇头移动的位置是否有蛋<br>if(eggX == x &amp;&amp; eggY == y) {<br>arr[eggY][eggX].className = ‘col activeSneck’<br>sneckBody.push(arr[eggY][eggX]); //加入到蛇身<br>score++;<br>time -= 100;<br>console.log(time)<br>scoreDiv.innerHTML = ‘总分:’ + score + ‘分’;<br>createEgg();<br>}<br>```</p>
-<p>##通过以上步骤，大家对贪吃蛇游戏的设计思路也有一定的了解了吧，下面附上效果图和源码下载地址：<br><img src="http://img.blog.csdn.net/20160922090541322" alt="游戏效果图"><br><a href="https://github.com/litong9406/islight/blob/master/eat_sneck.html" target="_blank" rel="external">源码查看下载链接</a></p>
+        <h1 id="欢迎使用马克飞象"><a href="#欢迎使用马克飞象" class="headerlink" title="欢迎使用马克飞象"></a>欢迎使用马克飞象</h1><p>@(示例笔记本)[马克飞象|帮助|Markdown]</p>
+<p><strong>马克飞象</strong>是一款专为印象笔记（Evernote）打造的Markdown编辑器，通过精心的设计与技术实现，配合印象笔记强大的存储和同步功能，带来前所未有的书写体验。特点概述：</p>
+<ul>
+<li><strong>功能丰富</strong> ：支持高亮代码块、<em>LaTeX</em> 公式、流程图，本地图片以及附件上传，甚至截图粘贴，工作学习好帮手；</li>
+<li><strong>得心应手</strong> ：简洁高效的编辑器，提供<a href="http://maxiang.info/client_zh" target="_blank" rel="external">桌面客户端</a>以及<a href="https://chrome.google.com/webstore/detail/kidnkfckhbdkfgbicccmdggmpgogehop" target="_blank" rel="external">离线Chrome App</a>，支持移动端 Web；</li>
+<li><strong>深度整合</strong> ：支持选择笔记本和添加标签，支持从印象笔记跳转编辑，轻松管理。</li>
+</ul>
+<hr>
+<p>[TOC]</p>
+<h2 id="Markdown简介"><a href="#Markdown简介" class="headerlink" title="Markdown简介"></a>Markdown简介</h2><blockquote>
+<p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。    —— <a href="https://zh.wikipedia.org/wiki/Markdown" target="_blank" rel="external">维基百科</a></p>
+</blockquote>
+<p>正如您在阅读的这份文档，它使用简单的符号标识不同的标题，将某些文字标记为<strong>粗体</strong>或者<em>斜体</em>，创建一个<a href="http://www.example.com" target="_blank" rel="external">链接</a>或一个脚注[^demo]。下面列举了几个高级功能，更多语法请按<code>Ctrl + /</code>查看帮助。 </p>
+<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@requires_authorization</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">somefunc</span><span class="params">(param1=<span class="string">''</span>, param2=<span class="number">0</span>)</span>:</span></div><div class="line"><span class="string">'''A docstring'''</span></div><div class="line"><span class="keyword">if</span> param1 &gt; param2: <span class="comment"># interesting</span></div><div class="line"><span class="keyword">print</span> <span class="string">'Greater'</span></div><div class="line"><span class="keyword">return</span> (param2 - param1 + <span class="number">1</span>) <span class="keyword">or</span> <span class="keyword">None</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>:</span></div><div class="line"><span class="keyword">pass</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>message = <span class="string">'''interpreter</span></div><div class="line"><span class="meta">... </span>prompt'''</div></pre></td></tr></table></figure>
+<h3 id="LaTeX-公式"><a href="#LaTeX-公式" class="headerlink" title="LaTeX 公式"></a>LaTeX 公式</h3><p>可以创建行内公式，例如 $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$。或者块级公式：</p>
+<p>$$    x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$</p>
+<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">Item</th>
+<th style="text-align:right">Value</th>
+<th style="text-align:center">Qty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Computer</td>
+<td style="text-align:right">1600 USD</td>
+<td style="text-align:center">5</td>
+</tr>
+<tr>
+<td style="text-align:left">Phone</td>
+<td style="text-align:right">12 USD</td>
+<td style="text-align:center">12</td>
+</tr>
+<tr>
+<td style="text-align:left">Pipe</td>
+<td style="text-align:right">1 USD</td>
+<td style="text-align:center">234</td>
+</tr>
+</tbody>
+</table>
+<h3 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">st=&gt;start: Start</div><div class="line">e=&gt;end</div><div class="line">op=&gt;operation: My Operation</div><div class="line">cond=&gt;condition: Yes or No?</div><div class="line"></div><div class="line">st-&gt;op-&gt;cond</div><div class="line">cond(yes)-&gt;e</div><div class="line">cond(no)-&gt;op</div></pre></td></tr></table></figure>
+<p>以及时序图:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Alice-&gt;Bob: Hello Bob, how are you?</div><div class="line">Note right of Bob: Bob thinks</div><div class="line">Bob--&gt;Alice: I am good thanks!</div></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>提示：</strong>想了解更多，请查看<strong>流程图</strong><a href="http://adrai.github.io/flowchart.js/" target="_blank" rel="external">语法</a>以及<strong>时序图</strong><a href="http://bramp.github.io/js-sequence-diagrams/" target="_blank" rel="external">语法</a>。</p>
+</blockquote>
+<h3 id="复选框"><a href="#复选框" class="headerlink" title="复选框"></a>复选框</h3><p>使用 <code>- [ ]</code> 和 <code>- [x]</code> 语法可以创建复选框，实现 todo-list 等功能。例如：</p>
+<ul>
+<li>[x] 已完成事项</li>
+<li>[ ] 待办事项1</li>
+<li>[ ] 待办事项2</li>
+</ul>
+<blockquote>
+<p><strong>注意：</strong>目前支持尚不完全，在印象笔记中勾选复选框是无效、不能同步的，所以必须在<strong>马克飞象</strong>中修改 Markdown 原文才可生效。下个版本将会全面支持。</p>
+</blockquote>
+<h2 id="印象笔记相关"><a href="#印象笔记相关" class="headerlink" title="印象笔记相关"></a>印象笔记相关</h2><h3 id="笔记本和标签"><a href="#笔记本和标签" class="headerlink" title="笔记本和标签"></a>笔记本和标签</h3><p><strong>马克飞象</strong>增加了<code>@(笔记本)[标签A|标签B]</code>语法, 以选择笔记本和添加标签。 <strong>绑定账号后</strong>， 输入<code>(</code>自动会出现笔记本列表，请从中选择。</p>
+<h3 id="笔记标题"><a href="#笔记标题" class="headerlink" title="笔记标题"></a>笔记标题</h3><p><strong>马克飞象</strong>会自动使用文档内出现的第一个标题作为笔记标题。例如本文，就是第一行的 <code>欢迎使用马克飞象</code>。</p>
+<h3 id="快捷编辑"><a href="#快捷编辑" class="headerlink" title="快捷编辑"></a>快捷编辑</h3><p>保存在印象笔记中的笔记，右上角会有一个红色的编辑按钮，点击后会回到<strong>马克飞象</strong>中打开并编辑该笔记。</p>
+<blockquote>
+<p><strong>注意：</strong>目前用户在印象笔记中单方面做的任何修改，马克飞象是无法自动感知和更新的。所以请务必回到马克飞象编辑。</p>
+</blockquote>
+<h3 id="数据同步"><a href="#数据同步" class="headerlink" title="数据同步"></a>数据同步</h3><p><strong>马克飞象</strong>通过<strong>将Markdown原文以隐藏内容保存在笔记中</strong>的精妙设计，实现了对Markdown的存储和再次编辑。既解决了其他产品只是单向导出HTML的单薄，又规避了服务端存储Markdown带来的隐私安全问题。这样，服务端仅作为对印象笔记 API调用和数据转换之用。</p>
+<blockquote>
+<p><strong>隐私声明：用户所有的笔记数据，均保存在印象笔记中。马克飞象不存储用户的任何笔记数据。</strong></p>
+</blockquote>
+<h3 id="离线存储"><a href="#离线存储" class="headerlink" title="离线存储"></a>离线存储</h3><p><strong>马克飞象</strong>使用浏览器离线存储将内容实时保存在本地，不必担心网络断掉或浏览器崩溃。为了节省空间和避免冲突，已同步至印象笔记并且不再修改的笔记将删除部分本地缓存，不过依然可以随时通过<code>文档管理</code>打开。</p>
+<blockquote>
+<p><strong>注意：</strong>虽然浏览器存储大部分时候都比较可靠，但印象笔记作为专业云存储，更值得信赖。以防万一，<strong>请务必经常及时同步到印象笔记</strong>。</p>
+</blockquote>
+<h2 id="编辑器相关"><a href="#编辑器相关" class="headerlink" title="编辑器相关"></a>编辑器相关</h2><h3 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h3><p>右侧系统菜单（快捷键<code>Ctrl + M</code>）的<code>设置</code>中，提供了界面字体、字号、自定义CSS、vim/emacs 键盘模式等高级选项。</p>
+<h3 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h3><p>帮助    <code>Ctrl + /</code><br>同步文档    <code>Ctrl + S</code><br>创建文档    <code>Ctrl + Alt + N</code><br>最大化编辑器    <code>Ctrl + Enter</code><br>预览文档 <code>Ctrl + Alt + Enter</code><br>文档管理    <code>Ctrl + O</code><br>系统菜单    <code>Ctrl + M</code> </p>
+<p>加粗    <code>Ctrl + B</code><br>插入图片    <code>Ctrl + G</code><br>插入链接    <code>Ctrl + L</code><br>提升标题    <code>Ctrl + H</code></p>
+<h2 id="关于收费"><a href="#关于收费" class="headerlink" title="关于收费"></a>关于收费</h2><p><strong>马克飞象</strong>为新用户提供 10 天的试用期，试用期过后需要<a href="maxiang.info/vip.html">续费</a>才能继续使用。未购买或者未及时续费，将不能同步新的笔记。之前保存过的笔记依然可以编辑。</p>
+<h2 id="反馈与建议"><a href="#反馈与建议" class="headerlink" title="反馈与建议"></a>反馈与建议</h2><ul>
+<li>微博：<a href="http://weibo.com/u/2788354117" target="_blank" rel="external">@马克飞象</a>，<a href="http://weibo.com/ggock" title="开发者个人账号" target="_blank" rel="external">@GGock</a></li>
+<li>邮箱：<a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#104;&#x75;&#115;&#116;&#x67;&#111;&#x63;&#x6b;&#64;&#103;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#109;">&#104;&#x75;&#115;&#116;&#x67;&#111;&#x63;&#x6b;&#64;&#103;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#109;</a></li>
+</ul>
+<hr>
+<p>感谢阅读这份帮助文档。请点击右上角，绑定印象笔记账号，开启全新的记录与分享体验吧。</p>
+<p>[^demo]: 这是一个示例脚注。请查阅 <a href="https://github.com/fletcher/MultiMarkdown/wiki/MultiMarkdown-Syntax-Guide#footnotes" target="_blank" rel="external">MultiMarkdown 文档</a> 关于脚注的说明。 <strong>限制：</strong> 印象笔记的笔记内容使用 <a href="https://dev.yinxiang.com/doc/articles/enml.php" target="_blank" rel="external">ENML</a> 格式，基于 HTML，但是不支持某些标签和属性，例如id，这就导致<code>脚注</code>和<code>TOC</code>无法正常点击。</p>
 
       
     </div>
@@ -296,7 +370,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="哈哈" data-title="JavaScript 贪吃蛇游戏的实现 " data-url="http://yoursite.com/2016/09/13/哈哈/"></div>
+	<div class="ds-thread" data-thread-key="哈哈" data-title="MakeDown 学习笔记 " data-url="http://yoursite.com/2016/09/13/哈哈/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
