@@ -4,21 +4,26 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>哈哈  | 李童的博客</title>
+  <title>JavaScript 贪吃蛇游戏的实现  | 李童的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#这是H1
-##这是H2">
+  <meta name="description" content="JavaScript 贪吃蛇游戏的实现###前言游戏介绍：贪吃蛇游戏是一款经典小游戏，既简单又耐玩。通过控制蛇头方向吃蛋，使得蛇变长，从而获得积分。游戏玩法：上下左右控制蛇的方向，寻找吃的东西，每吃一口就能得到一定的积分，而且蛇的身子会越吃越长，身子越长玩的难度就越大，不能碰墙，不能咬到自己的身体，更不能咬自己的尾巴，等到了一定的分数。
+###正文
+#####步骤1：创建页面布局，将每一个小格放到">
 <meta property="og:type" content="article">
-<meta property="og:title" content="哈哈 ">
+<meta property="og:title" content="JavaScript 贪吃蛇游戏的实现 ">
 <meta property="og:url" content="http://yoursite.com/2016/09/13/哈哈/index.html">
 <meta property="og:site_name" content="李童的博客">
-<meta property="og:description" content="#这是H1
-##这是H2">
-<meta property="og:updated_time" content="2016-09-13T09:27:12.000Z">
+<meta property="og:description" content="JavaScript 贪吃蛇游戏的实现###前言游戏介绍：贪吃蛇游戏是一款经典小游戏，既简单又耐玩。通过控制蛇头方向吃蛋，使得蛇变长，从而获得积分。游戏玩法：上下左右控制蛇的方向，寻找吃的东西，每吃一口就能得到一定的积分，而且蛇的身子会越吃越长，身子越长玩的难度就越大，不能碰墙，不能咬到自己的身体，更不能咬自己的尾巴，等到了一定的分数。
+###正文
+#####步骤1：创建页面布局，将每一个小格放到">
+<meta property="og:image" content="http://img.blog.csdn.net/20160922090541322">
+<meta property="og:updated_time" content="2016-09-23T02:46:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="哈哈 ">
-<meta name="twitter:description" content="#这是H1
-##这是H2">
+<meta name="twitter:title" content="JavaScript 贪吃蛇游戏的实现 ">
+<meta name="twitter:description" content="JavaScript 贪吃蛇游戏的实现###前言游戏介绍：贪吃蛇游戏是一款经典小游戏，既简单又耐玩。通过控制蛇头方向吃蛋，使得蛇变长，从而获得积分。游戏玩法：上下左右控制蛇的方向，寻找吃的东西，每吃一口就能得到一定的积分，而且蛇的身子会越吃越长，身子越长玩的难度就越大，不能碰墙，不能咬到自己的身体，更不能咬自己的尾巴，等到了一定的分数。
+###正文
+#####步骤1：创建页面布局，将每一个小格放到">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20160922090541322">
   
     <link rel="alternative" href="/atom.xml" title="李童的博客" type="application/atom+xml">
   
@@ -217,7 +222,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      哈哈 
+      JavaScript 贪吃蛇游戏的实现 
     </h1>
   
 
@@ -233,8 +238,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#这是H1</p>
-<p>##这是H2</p>
+        <h2 id="JavaScript-贪吃蛇游戏的实现"><a href="#JavaScript-贪吃蛇游戏的实现" class="headerlink" title="JavaScript 贪吃蛇游戏的实现"></a>JavaScript 贪吃蛇游戏的实现</h2><p>###前言<br>游戏介绍：贪吃蛇游戏是一款经典小游戏，既简单又耐玩。通过控制蛇头方向吃蛋，使得蛇变长，从而获得积分。<br>游戏玩法：上下左右控制蛇的方向，寻找吃的东西，每吃一口就能得到一定的积分，而且蛇的身子会越吃越长，身子越长玩的难度就越大，不能碰墙，不能咬到自己的身体，更不能咬自己的尾巴，等到了一定的分数。</p>
+<p>###正文</p>
+<p>#####步骤1：创建页面布局，将每一个小格放到数组里面，通过行列构造一个二维数组，方便接下来的判断和一系列的操作。</p>
+<p>var rowNum = 30; //行<br>var colNum = 20 //列<br>function canvasBG(rowNum, colNum) {<br>for(var i = 0; i &lt; rowNum; i++) {<br>var row = document.createElement(“div”);<br>var rowArray = [];<br>for(var j = 0; j &lt; colNum; j++) {<br>var col = document.createElement(“div”);<br>col.className = ‘col’//每一小格的样式名<br>row.appendChild(col)<br>rowArray.push(col)<br>}<br>mainDiv.appendChild(row);<br>arr.push(rowArray)//arr即为创建的二维数组<br>}<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#####步骤2：创建蛇的身体，并通过计时器让蛇身体移动</div></pre></td></tr></table></figure></p>
+<p>//创建蛇身体<br>var x=2;//列值<br>var y=10//行值<br>var sneckBody=[];//用来存放蛇的身体<br>//这样蛇初使的位置为第10的前面3个小格，即蛇长度为3；<br>function sneck() {<br>for(var i = 0; i &lt; 3; i++) {<br>arr[y][i].className = ‘col activeSneck’;//在原有小格样式的基础上，添加新样式，来改变背景颜色，产生蛇的身体<br>sneckBody.push(arr[y][i]);<br>}<br>}<br>//控制蛇的移动<br>sneckTimer = setInterval(function() {<br>//根据设置的方向来设置蛇头移动的方向。<br>switch(direction) {<br>case ‘right’:<br>x++;<br>break;<br>case ‘left’:<br>x–<br>break;<br>case ‘up’:<br>y–;<br>break;<br>case ‘down’:<br>y++;<br>break;<br>default:<br>break;<br>}<br>sneckBody[0].className = ‘col’;<br>sneckBody.shift();<br>arr[y][x].className = ‘col activeSneck’;<br>sneckBody.push(arr[y][x]);//sneckBody数组专门用来存放蛇的身体<br>}, time)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#####步骤3：控制蛇的移动，并加判断防止重复按键</div></pre></td></tr></table></figure></p>
+<p>var delaytime = null;//定时器<br>var changeDir = true;<br>//通过上下左右按键来改变direction的值，来改变蛇头的移动方向。<br>document.onkeydown = function(event) {<br>//判断是否需要改变方向,ture表示需要改变，false不要<br>if(!changeDir) {<br>return; //表示直接结束函数，后续代码不执行；<br>}<br>var event = window.event || event;<br>console.log(event.keyCode)<br>//加入判断，防止蛇往移动相反方向跑，出现错误<br>switch(event.keyCode) {<br>case 37:<br>if(direction != ‘right’) {<br>direction = ‘left’;<br>}<br>break;<br>case 39:<br>if(direction != ‘left’) {<br>direction = ‘right’;<br>}<br>break;<br>case 38:<br>if(direction != ‘down’) {<br>direction = ‘up’;<br>}<br>break;<br>case 40:<br>if(direction != ‘up’) {<br>direction = ‘down’;<br>}<br>break;<br>default:<br>break;<br>}<br>changeDir = false;<br>//加延时以及changeDir解决同时按两个键出现的bug;<br>delaytime = setTimeout(function() {<br>changeDir = true;<br>}, time)<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#####步骤4：创建食物，通过随机数函数来创建生成食物的位置，并进行判断防止和蛇身重合</div></pre></td></tr></table></figure></p>
+<p>//随机函数<br>function random_(max) {<br>var rand = Math.floor(Math.random() * max);<br>return rand;<br>}</p>
+<p>function createEgg() {<br>//随机出新的egg的下标的x和y<br>eggX = random<em>(colNum);<br>eggY = random</em>(rowNum);<br>//如果即将生蛋的位置和蛇身重合，即className一样<br>if(arr[eggY][eggX].className == ‘col activeSneck’) {<br>createEgg(); //重新生成<br>} else {<br>//否则，给新生的蛋的位置，并且修改样式<br>arr[eggY][eggX].className = ‘col egg’;<br>}<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#####步骤5：进行判断：</div><div class="line">判断1：蛇跑出边界，游戏结束</div></pre></td></tr></table></figure></p>
+<p>if(y &lt; 0 || y &gt;= rowNum || x &lt; 0 || x &gt;= colNum) {<br>alert(‘game over’ + “ “ + ‘总分’ + score);<br>clearInterval(sneckTimer);<br>return;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">判断2：蛇碰到自己身体，游戏结束</div></pre></td></tr></table></figure></p>
+<p>//判断蛇吃到自己<br>for(var i = 0; i &lt; sneckBody.length; i++) {<br>if(sneckBody[i] == arr[y][x]) {<br>alert(‘game over’ + “ “ + ‘总分’ + score);<br>clearInterval(sneckTimer);<br>return;<br>}<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">判断3：蛇吃到食物，分数加1，并且继续创建食物</div></pre></td></tr></table></figure></p>
+<p>//判断蛇头移动的位置是否有蛋<br>if(eggX == x &amp;&amp; eggY == y) {<br>arr[eggY][eggX].className = ‘col activeSneck’<br>sneckBody.push(arr[eggY][eggX]); //加入到蛇身<br>score++;<br>time -= 100;<br>console.log(time)<br>scoreDiv.innerHTML = ‘总分:’ + score + ‘分’;<br>createEgg();<br>}<br>```</p>
+<p>##通过以上步骤，大家对贪吃蛇游戏的设计思路也有一定的了解了吧，下面附上效果图和源码下载地址：<br><img src="http://img.blog.csdn.net/20160922090541322" alt="游戏效果图"><br><a href="https://github.com/litong9406/islight/blob/master/eat_sneck.html" target="_blank" rel="external">源码查看下载链接</a></p>
 
       
     </div>
@@ -281,7 +296,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="哈哈" data-title="哈哈 " data-url="http://yoursite.com/2016/09/13/哈哈/"></div>
+	<div class="ds-thread" data-thread-key="哈哈" data-title="JavaScript 贪吃蛇游戏的实现 " data-url="http://yoursite.com/2016/09/13/哈哈/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
