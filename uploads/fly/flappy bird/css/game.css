@@ -1,0 +1,224 @@
+/*背景画布*/
+
+.canvas {
+    position: relative;
+    width: 343px;
+    height: 480px;
+    margin: auto;
+    background: url(../images/bg.jpg) no-repeat;
+    overflow: hidden;
+}
+
+/*游戏开始*/
+.game_start{
+  display: block;
+}
+
+.head {
+    position: absolute;
+    top: 100px;
+    left: 60px;
+    animation: birdmove 1.5s infinite;
+}
+.head .small_bird {
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    right: 0px;
+    top: 20px;
+    animation: birdbg 0.4s infinite;
+}
+
+/*head 动画*/
+
+@keyframes birdmove {
+    0% {top: 100px;}
+    50% {top:120px;}
+    100% {top: 100px;}
+}
+
+@keyframes birdbg {
+  0%{background:url(../images/bird0.png) no-repeat; }
+  100%{background:url(../images/bird1.png) no-repeat; }
+}
+
+/*btns 按钮组*/
+.btns {
+    /*margin:0 auto;*/
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 250px;
+}
+.btns .start_btn {
+    display: inline-block;
+    width: 85px;
+    height: 29px;
+    background: url(../images/start.jpg) no-repeat;
+    margin-left: 10px;
+}
+.btns .submit_btn {
+    display: inline-block;
+    width: 85px;
+    height: 29px;
+    margin-left: 10px;
+    background: url(../images/submit.jpg) no-repeat;
+}
+
+/*移动条*/
+.slider{
+  width: 686px;
+  height: auto;
+  font-size: 0px;
+  position: absolute;
+  left:0px;
+  top:423px;
+  animation: slidermove 3s infinite linear;
+}
+.slider img{
+  display: inline-block;
+}
+
+@keyframes slidermove {
+  0%{left: 0}
+  100%{left: -343px;}
+}
+/*鸟*/
+#flybird{
+  display: none;
+  position: absolute;
+  /*z-index: 10;*/
+  width: 40px;
+  height: 30px;
+  left: 50px;
+  top:200px;
+  background: url(../images/bird0.png) no-repeat;
+}
+@keyframes flybird_up {
+  0%{background:url(../images/up_bird0.png) no-repeat; }
+  100%{background:url(../images/up_bird1.png) no-repeat; }
+}
+@keyframes flybird_down {
+  0%{background:url(../images/down_bird0.png) no-repeat; }
+  100%{background:url(../images/down_bird1.png) no-repeat; }
+}
+.birddown{
+	transition: all 1s linear;
+	z-index: 100;
+}
+#flybird_up{
+  display: none;
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  left: 50px;
+  top:200px;
+  animation: flybird_up 0.3s infinite;	
+}
+#flybird_down{
+  display: none;
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  left: 50px;
+  top:200px;
+  animation: flybird_down 0.3s infinite;	
+}
+/*管道*/
+.conduit_group{
+	width: 100%;
+	height: auto;
+	position: absolute;
+}
+.conduitItem{
+  width: 62px;
+  height: 423px;
+  position: absolute;
+  top: 0;
+}
+.top_conduit{
+  width: 100%;
+  position:absolute;
+  top: 0;
+  background: url(../images/up_mod.png) ;
+}
+.top_conduit div{
+  background: url(../images/up_pipe.png) 0 bottom no-repeat;
+}
+.bottom_conduit{
+  width: 100%;
+  position:absolute;
+  bottom: 0;
+  background: url(../images/down_mod.png);
+}
+
+.bottom_conduit div{
+  background: url(../images/down_pipe.png) 0 top no-repeat;
+}
+@keyframes overimg{
+	0%{top:-100px}
+	100%{top:100px}
+}
+@keyframes overmessage{
+	0%{top:500px}
+	100%{top:150px}
+}
+/*游戏结束*/
+.gameover{
+  display: none;
+  
+}
+.gameover .overImg{
+  position: absolute;
+  left:60px;top: 100px;
+    z-index: 101;
+	animation: overimg 1s ;
+  
+}
+.gameover .overMessage{
+  width: 269px;
+  height: 135px;
+  background: url(../images/message.jpg) no-repeat;
+  position: absolute;
+  left: 40px;top:150px;
+	animation: overmessage 0.6s ;
+    z-index: 101;
+	
+}
+.gameover .overMessage .thisScore{
+  position: absolute;
+  right:30px;top: 35px;
+  font-size: 2.5em;
+  color:#fff;
+}
+.gameover .overMessage .historyScore{
+  position:absolute;
+  right: 30px;top: 85px;
+  font-size: 2em;
+  color: red;
+  font-weight: 100;
+}
+
+.game_restart{
+  position: absolute;
+  left: 130px;
+  top: 300px;
+    z-index: 101;
+  
+	animation: res 1s;
+  
+}
+
+@keyframes res{
+	0%{left:-100px}
+	100%{left 130px}
+}
+
+/*积分*/
+.scroing {
+    position: absolute;
+    top: 40px;
+    text-align: center;
+    width: 100%;
+}
