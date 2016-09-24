@@ -168,6 +168,7 @@ function restart() {
 	scoreDiv.innerHTML = null;
 	isGameOver = true;
 	speed = 0;
+	score=0;
 	speedMax = 8;
 	document.querySelector('.gameover').style.display = 'none';
 	gameStartDiv.style.display = 'block';
